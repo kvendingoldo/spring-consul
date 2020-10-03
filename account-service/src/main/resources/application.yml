@@ -1,0 +1,6 @@
+spring:
+  output.ansi.enabled: ALWAYS
+
+logging:
+  level:
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG

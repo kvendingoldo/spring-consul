@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: order-service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        instance-id: "${spring.cloud.client.hostname}:${spring.application.name}:${random.int[1,999999]}"
+      config:
+        enabled: true
+        prefix: order-service
+        defaultContext: config
+        profileSeparator: '::'
+
+logging:
+  level:
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+
+server.port: 0

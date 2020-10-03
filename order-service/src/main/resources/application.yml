@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: order-service
+
+logging:
+  file: logs/order.log
+  level:
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+  pattern:
+    file: "%d{HH:mm:ss.SSS} %-5level %msg%n"
